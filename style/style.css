@@ -1,200 +1,354 @@
 /* reset */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-                  /* mobile */
 
-  body {
-    background-color: #e6e6dd
-    
+/* mobile */
+body {
+    background-color: #181818;
 }
-                          
- 
-
-                            /* main */
-main{
-    
-    align-content: center;
-}
-
-main h1{
-    font-size: 140%;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-shadow: 1px 1px 2px greenyellow;
-    padding: 30px 30px;
-    display: flex;
-    justify-content: center;
-
-}
-
-
-
-main div img {
-    border: 1px solid black;
-    width: 100%;
-    height: 80%;
-    object-fit: cover;
-}
-
-
-
-
-
-main section {
-    margin: 0px 30px;
-   display: grid;
-   grid-template-columns: 1fr ;
-   grid-template-rows: 4 10%;
-  
-   
-
-}
-
-main section div.img1, .img2, .img3, .img4 p{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: center;
-
-}
-
-
-   
-    
-
 
 /* logo wp */
+#whatsappSticky {
+    z-index: 99999999999999999999;
+    border-radius: 50%;
+    display: none;
+    background-color: #25d366;
+    color: white;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0 2px 12px 0px rgba(0, 0, 0, .3);
+    box-shadow: 0 2px 12px px rgba(0, 0, 0, .3);
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+    text-align: center;
+}
 
- #whatsappSticky{z-index:99999999999999999999;
-    border-radius:50%;
-    display:none;
-    background-color:#25d366;
-    color:white;
-    -webkit-transition: all 300ms ease-in-out;-moz-transition: all 300ms ease-in-out;
-    -ms-transition: all 300ms ease-in-out;-o-transition: all 300ms ease-in-out;transition: all 300ms ease-in-out;
-    box-sizing:border-box;
-    -webkit-box-shadow: 0 2px 12px 0px rgba(0,0,0,.3);
-    box-shadow: 0 2px 12px px rgba(0,0,0,.3);
-    position:fixed;
-     bottom:15px;
-      right:20px;text-align:center;
+#whatsappSticky:after {
+    opacity: 0;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    right: calc(100% - 15px);
+    top: calc(50% - 13.5px);
+    font-size: 15px;
+    line-height: 15px;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+    display: block;
+    background-color: #25d366;
+    color: white;
+    content: "Enviar Whatsapp";
+    text-align: right;
+    padding: 6px 20px 6px 6px;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+
+#whatsappSticky:hover:after {
+    opacity: 1;
+}
+
+@media only screen and (max-width:480px) {
+    #whatsappSticky {
+        width: 48px;
+        height: 48px;
+        font-size: 28px;
+        line-height: 24px;
+        padding: 10px;
     }
-    #whatsappSticky:after{
-        opacity:0;
-        display:block;
-        position:absolute;
-        z-index:-1;
-        right:calc(100% - 15px);
-        top:calc(50% - 13.5px);
-        font-size:15px;
-        line-height:15px;
-        -webkit-transition: all 300ms ease-in-out;-moz-transition: all 300ms ease-in-out;-ms-transition: all 300ms ease-in-out;
-        -o-transition: all 300ms ease-in-out;
-        transition: all 300ms ease-in-out;
-        display:block;
-        background-color:#25d366;color:white;
-        content:"Enviar Whatsapp";
-        text-align:right;
-        padding: 6px 20px 6px 6px;
-        border-radius:6px;white-space: nowrap;
+}
+
+@media only screen and (min-width:481px) {
+    #whatsappSticky {
+        width: 64px;
+        height: 64px;
+        font-size: 34px;
+        line-height: 24px;
+        padding: 15px;
     }
-    #whatsappSticky:hover:after{
-        opacity:1;}
-        @media only screen and (max-width:480px)
-        {#whatsappSticky{width:48px;height:48px;font-size:28px;line-height:24px;padding:10px;}}
-        @media only screen and (min-width:481px)
-        {#whatsappSticky{width:64px;height:64px;font-size:34px;line-height:24px;padding:15px;}}
-        
-                          /* footer */
+}
+
+/* main */
+main h1 {
+    margin-top: 20px;
+    font-size: 180%;
+    text-align: center;
+    text-decoration: dotted;
+    color: wheat;
+    font-family: "Major Mono Display", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+main h1:hover {
+    text-transform: uppercase;
+}
+
+main .container-index {
+    margin: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 18%);
+    gap: 0 10px;
+    row-gap: 80px;
+    align-content: center;
+    text-align: center;
+}
+
+main .container-index .imgI {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10%;
+}
+
+main .container-index .parrafo-index {
+    color: wheat;
+    font-size: 100%;
+    font-family: "Major Mono Display", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* footer */
 footer {
-    background-color: rgb(33, 0, 0);
-    color: antiquewhite;
+    background-color: #232222;
+    color: wheat;
     padding: 10px;
     display: grid;
     align-content: center;
-
+    font-family: "Major Mono Display", monospace;
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 5% 5% 0 0;
 }
 
-footer h2{
+footer h2 {
     text-align: center;
 }
 
-
-                          /* link */
-
-footer .enlace-redes{
+/* link */
+footer .enlace-redes {
     text-decoration: none;
-}
-
-.enlace-redes{
     color: tomato;
 }
 
- .enlace-redes:hover {
-    text-decoration:underline;
+.enlace-redes:hover {
+    text-decoration: underline;
 }
-                       
+
+/* Productos html */
+.imgP {
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+    object-fit: cover;
+
+}
+
+.container-productos {
+    margin: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 18%);
+    row-gap: 120px;
+    text-align: center;
+    color: wheat;
+}
+
+.container-productos div button {
+    background-color: #b70e21;
+    width: 60%;
+    color: wheat;
+}
+
+/* Tutoriales.html */
+.container-tut {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+/* Contacto */
+.container-contacto {
+    max-width: 300px;
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+    color: wheat;
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3)
+}
+
+form form button,
+form input,
+form textarea,
+form button {
+    width: 100%;
+    padding: .7em;
+}
+
+form button {
+    background-color: #b70e21;
+}
+
+/* carrito.html */
+.container-carrito {
+    padding: 10px;
+    margin: 10px;
+    background-color: #232222;
+    text-align: center;
+    margin-bottom: 290px;
+}
+
 
 
 /* mq tablet */
-
 @media screen and (min-width: 768px) {
     header {
-        width: 30%;
-    
+        width: 100%;
+    }
+
+    .container-index {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 35%);
+        margin-bottom: 65px;
+        gap: 10px;
+        row-gap: 90px;
+    }
+
+    .container-productos {
+        padding-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 35%);
+        gap: 10px;
+        row-gap: 120px;
+    }
+
+    .imgI p {
+        font-size: large;
+    }
+
+    .container-tut {
+        height: 80vh;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .container-productos div button {
+        background-color: #b70e21;
+        width: 60%;
+        color: wheat;
+    }
+
+    .container-contacto {
+        display: grid;
+        align-content: center;
+        height: 74vh;
+        max-width: 700px;
+        margin-bottom: 60px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1.5em;
+        color: wheat;
+    }
+
+    /* carrito.html */
+    .container-carrito {
+        display: flex;
+        justify-content: space-between;
+        padding: 200px;
+        margin: 20px;
+        margin-bottom: 500px;
+        background-color: #232222;
+
     }
 }
-   
-    
-  
-    main section{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr );
-        grid-template-rows: repeat(2, 40%);
-        gap: 10px;
+
+/* mq desktop */
+@media screen and (min-width: 1268px) {
+
+    /* index.html */
+    header {
+        width: 100%;
     }
-    
 
-
-    main section div.img1, .img2, .img3, .img4 p{
-        font-size: large;
-       
+    main .container-index {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 450px);
+        column-gap: 70px;
+        margin: 0 30px;
+        margin-bottom: 140px;
     }
-   
-   
-   
-
-       
-    
-    
-    
-    
-      /* mq desktop */
-      @media screen and (min-width: 1268px) {
-        header {
-            width: 100%;
-        
-        }
-        }
 
 
-    
-                
-     /* boostrap productos */
-     .segunda-fila{
+    /* tutoriales.html */
+    .container-tut {
+        height: 65vh;
+        display: flex;
+        flex-direction: row;
         justify-content: center;
+        gap: 30px;
     }
-    .descrip{
+
+    /* Productos.html */
+    .container-productos {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 450px);
+        column-gap: 70px;
+        margin: 0 30px;
+        margin-bottom: 140px;
+    }
+
+    .container-productos div button {
+        background-color: #b70e21;
+        width: 60%;
+        color: wheat;
+    }
+
+    /* contacto.html */
+    .container-contacto {
+        max-width: 1140px;
+        margin-bottom: 60px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1.5em;
+        color: wheat;
+        box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3)
+    }
+
+    form form button,
+    form input,
+    form textarea,
+    form button {
+        width: 100%;
+        padding: .7em;
+    }
+
+    form button {
+        background-color: #b70e21;
+    }
+
+    /* carrito.html */
+    .container-carrito {
+        display: flex;
+        padding: 200px;
+        margin: 100px;
+        background-color: #232222;
         text-align: center;
+        justify-content: space-between;
     }
-
- /* contacto */
- main.contacto{
-    height: 80vh;
- }
-
-  
-   /* carrito */
-   main.carrito{
-    height: 80vh;
-   }
+}
