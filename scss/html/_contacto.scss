@@ -1,0 +1,30 @@
+@import "../utilidades/variables";
+
+main {
+    .container-contacto {
+
+        max-width: 300px;
+        margin-bottom: 60px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1.5em;
+        color: $color-secundario;
+        box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3)
+    }
+
+    form {
+
+        input,
+        textarea,
+        button {
+            width: 100%;
+            padding: .7em;
+        }
+
+        button {
+            background-color: #b70e21;
+        }
+    }
+
+
+}
