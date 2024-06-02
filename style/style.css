@@ -17,6 +17,33 @@ main .container-productos {
   text-align: center;
   color: wheat;
 }
+@media (min-width: 768px) {
+  main .container-productos {
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 35%);
+    gap: 10px;
+    row-gap: 120px;
+  }
+  main .container-productos .img p {
+    font-size: large;
+  }
+}
+@media (min-width: 1024px) {
+  main .container-productos {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 450px);
+    column-gap: 70px;
+    margin: 0 30px;
+    margin-bottom: 140px;
+  }
+  main .container-productos div button {
+    background-color: #b70e21;
+    width: 60%;
+    color: wheat;
+  }
+}
 main .container-productos .imgp {
   width: 100%;
   height: 100%;
@@ -36,6 +63,26 @@ main .container-carrito {
   text-align: center;
   margin-bottom: 290px;
 }
+@media (min-width: 1024px) {
+  main .container-carrito {
+    display: flex;
+    padding: 200px;
+    margin: 100px;
+    background-color: #232222;
+    text-align: center;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 768px) {
+  main .container-carrito {
+    display: flex;
+    justify-content: space-between;
+    padding: 200px;
+    margin: 20px;
+    margin-bottom: 500px;
+    background-color: #232222;
+  }
+}
 
 main .container-contacto {
   max-width: 300px;
@@ -46,20 +93,58 @@ main .container-contacto {
   color: wheat;
   box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.3);
 }
-main form input,
-main form textarea,
-main form button {
+main .container-contacto form form button,
+main .container-contacto form input,
+main .container-contacto form textarea,
+main .container-contacto form button {
   width: 100%;
   padding: 0.7em;
 }
-main form button {
+main .container-contacto form input,
+main .container-contacto form textarea,
+main .container-contacto form button {
+  width: 100%;
+  padding: 0.7em;
+}
+main .container-contacto form button {
   background-color: #b70e21;
+}
+@media (min-width: 768px) {
+  main .container-contacto {
+    display: grid;
+    align-content: center;
+    height: 74vh;
+    max-width: 700px;
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+    color: wheat;
+  }
+}
+@media (min-width: 1024px) {
+  main .container-contacto {
+    max-width: 1140px;
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+    color: wheat;
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.3);
+  }
 }
 
 main .container-tut {
   display: flex;
   flex-flow: column;
   align-items: center;
+}
+@media (min-width: 768px) {
+  main .container-tut {
+    height: 80vh;
+    justify-content: center;
+    gap: 40px;
+  }
 }
 
 main h1 {
@@ -72,10 +157,11 @@ main h1 {
   font-weight: 400;
   font-style: normal;
 }
-main h1 :hover {
+main h1:hover {
   text-transform: uppercase;
 }
-main .container-index {
+
+.container-index {
   margin: 0 20px;
   display: grid;
   grid-template-columns: 1fr;
@@ -85,13 +171,32 @@ main .container-index {
   align-content: center;
   text-align: center;
 }
-main .container-index .imgi {
+@media (min-width: 768px) {
+  .container-index {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 35%);
+    margin-bottom: 65px;
+    gap: 10px;
+    row-gap: 90px;
+  }
+}
+@media (min-width: 1024px) {
+  .container-index {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 450px);
+    column-gap: 70px;
+    margin: 0 30px;
+    margin-bottom: 140px;
+  }
+}
+.container-index .imgi {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 10%;
 }
-main .container-index .parrafo-index {
+.container-index .parrafo-index {
   color: wheat;
   font-size: 100%;
   font-family: "Major Mono Display", monospace;
@@ -115,10 +220,10 @@ footer h2 {
 }
 footer .enlace-redes {
   text-decoration: none;
-  color: tomato;
+  color: rgb(203, 80, 56);
 }
-footer .enlace-redes :hover {
-  text-decoration: underline;
+footer .enlace-redes:hover {
+  color: bisque;
 }
 
 /*# sourceMappingURL=style.css.map */

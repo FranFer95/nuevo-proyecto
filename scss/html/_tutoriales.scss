@@ -3,5 +3,11 @@ main {
         display: flex;
         flex-flow: column;
         align-items: center;
+
+        @include tablet {
+            height: 80vh;
+            justify-content: center;
+            gap: 40px;
+        }
     }
 }
