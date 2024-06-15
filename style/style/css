@@ -156,11 +156,8 @@ main h1 {
   font-family: "Major Mono Display", monospace;
   font-weight: 400;
   font-style: normal;
-  transition-duration: 1.4s;
-  transition-timing-function: ease-in-out;
 }
 main h1:hover {
-  scale: 1.2;
   text-transform: uppercase;
 }
 
@@ -229,4 +226,4 @@ footer .enlace-redes:hover {
   color: bisque;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=css.map */

@@ -19,8 +19,11 @@ main {
         font-family: "Major Mono Display", monospace;
         font-weight: 400;
         font-style: normal;
+        transition-duration: 1.4s;
+        transition-timing-function: ease-in-out;
 
-       &:hover {
+        &:hover {
+            scale: 1.2;
             text-transform: uppercase;
         }
     }
@@ -70,8 +73,6 @@ main {
         font-weight: 400;
         font-style: normal;
     }
-
-
 }
 
 footer {
@@ -94,7 +95,8 @@ footer {
         color: rgb(203, 80, 56);
 
         &:hover {
-            color: bisque
+            color: bisque;
+
         }
     }
 }

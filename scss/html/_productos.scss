@@ -1,6 +1,7 @@
 @import "../utilidades/variables";
 
 main {
+
     .container-productos {
         margin: 0 20px;
         display: grid;
@@ -51,7 +52,6 @@ main {
                 color: $color-secundario;
             }
         }
-
-
     }
+
 }
